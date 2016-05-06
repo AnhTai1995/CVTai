@@ -3,7 +3,10 @@
  */
 
 
-var app = angular.module('mycv', []);
+var app = angular.module('mycv', ["xeditable"]);
+app.run(function (editableOptions) {
+    editableOptions.theme ="bs3"
+});
 app.controller('Ctrller', function($scope, $http) {
     $http.get("JSON/data.json")
         .then(function(response) {

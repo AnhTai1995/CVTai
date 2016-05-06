@@ -1,0 +1,163 @@
+body
+{
+    background-color: #A9A9A9;
+}
+#header
+{
+    width: 960px; margin: 50px auto; background-color: #00FF7F;
+}
+
+#imgava
+{  width:250px;height:250px; margin-left: 20px;margin-top: 20px;
+}
+#infocanhan
+{
+    font-size: 17px;color:#000080;
+}
+#work
+{
+    font-size: 22px;
+}
+#info
+{
+    margin-left: 30px;margin-top: 30px;
+}
+
+#name
+{
+   color:#0000CD; margin-top:20px;font-size: 35px;font-weight: bold;
+}
+
+#sum1
+{
+    background-color: #A9A9A9;width: 150%;height: 30px;margin-left: -20px;margin-top: 10px;
+}
+
+#sum2
+{
+    margin-top: 20px;
+}
+#background
+{
+    background-color: #000000;color:#ffffff;width: 150px; height: 50px;padding: 15px;padding-right: 15px;
+}
+
+#summary
+{
+    margin-top: 10px; border-bottom: 1px solid #c0c0c0;
+}
+
+#imgsum1
+{
+    display: inline;
+}
+#imgsum
+{
+    display: inline; width: 30px;height: 30px;margin-left: 20px;
+}
+#sumpa
+{
+    display: inline; font-size: 20px;
+}
+#sumnd
+{
+    margin-left: 30px; margin-top: 10px;
+}
+
+#boderexp
+{
+    border-bottom: 1px solid #c0c0c0;
+}
+#imgexp
+{
+    display: inline; width: 30px;height: 30px;margin-left: 20px;
+}
+#expar
+{
+    display: inline; font-size: 20px;
+}
+
+#expnd
+{
+  margin-left: 30px;margin-top: 20px;
+}
+
+#project
+{  border-bottom: 1px solid #c0c0c0;
+}
+ #imgpro
+ {
+     display: inline; width: 30px;height: 30px;margin-left: 20px;
+ }
+
+ #propar
+ {
+     display: inline; font-size: 20px;
+ }
+
+ #prond
+ {
+     margin-top: 10px;
+ }
+#language
+{
+    border-bottom: 1px solid #c0c0c0;
+}
+
+#imglan
+{
+    display: inline; width: 30px;height: 30px;margin-left: 20px;
+}
+#lanpar
+{
+    display: inline; font-size: 20px;
+}
+#lannd
+{
+    margin-left:20px;margin-top: 20px;
+}
+#skill
+{
+    border-bottom: 1px solid #c0c0c0;
+}
+#imgskill
+{
+    display: inline; width: 30px;height: 30px;margin-left: 20px;
+}
+#skillpar1
+{
+    display: inline; font-size: 20px;
+}
+
+#skillpar2
+{
+    margin-top: 20px;margin-left: 30px;
+}
+#skillnd
+{
+    margin-top: 10px;
+}
+#education
+{
+    border-bottom: 1px solid #c0c0c0;
+}
+#imgedu
+{
+    display: inline; width: 30px;height: 30px;margin-left: 20px;
+}
+
+#edupar
+{
+    display: inline; font-size: 20px;
+}
+
+#edund
+{
+    margin-top: 10px;
+}
+
+
+
+
+
+

@@ -5,25 +5,26 @@
     <title>CV</title>
     <script language="javascript" src="angular.min.js"></script>
     <script language="javascript" src="script.js"></script>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="StyleCSS.css" />
+    <script language="javascript" src="xeditable.js"></script>
 </head>
-<body style="background-color: cadetblue">
-    <div ng-app="mycv" class="container"style="width: 960px; margin: 50px auto; background-color: white">
+<body >
+    <div ng-app="mycv" class="container" id= "header">
         <div   ng-controller="Ctrller" >
             <div class="col-sm-12" id="profile">
                 <div class="col-sm-4" ng-repeat="i in myimage">
-                    <img src="{{i.avarta}}" style="width:250px;height:250px; margin-left: 40px;margin-top: 20px;">
+                    <img src="{{i.avartar}}" id="imgava" >
                 </div>
-                <div class="col-sm-8">
-                    <div ng-repeat="x in myData" style=" margin-left: 30px;margin-top: 30px; ">
-                        <span style="margin-top:20px;font-size: 20px;font-weight: bold;">{{x.name }}</span><br/>
-                        <span style="font-size: 15px;">{{x.position}}</span><br/>
-                        <span >Major: {{x.major}}</span><br/>
-                        <span>Email: {{x.email}}</span><br/>
-                        <span>Phone: {{x.phone}}</span><br/>
-                        <span style="font-size: 15px;">Country: {{x.country}}</span>
+                <div class="col-sm-8" id="infocanhan" >
+                    <div ng-repeat="x in myData" id="info" >
+                        <span id="name" href="#" editable-text="x.name" >{{x.name || "empty"}}</span><br/>
+                        <span id="work" href="#" editable-text="x.work"  >{{x.work || "empty"}}</span><br/>
+                        <span href="#" editable-text="x.major">Major: {{x.major || "empty"}}</span><br/>
+                        <span href="#" editable-text="x.birthday">BirthDate: {{x.birthday || "empty"}}</span><br/>
+                        <span href="#" editable-text="x.email">Email: {{x.email ||"empty"}}</span><br/>
+                        <span href="#" editable-text="x.phone">Phone: {{x.phone ||"empty"}}</span><br/>
+                        <span href="#" editable-text="x.country">Country: {{x.country ||"empty"}}</span>
                         <br/><br/>
 
 
@@ -36,36 +37,32 @@
             </div>
 
 
-            <div class="col-sm-12" style="background-color: cadetblue;width: 150%;height: 30px;margin-left: -20px;margin-top: 10px;"></div>
-            <div class="col-sm-12" style="margin-top: 20px;">
-                <label style="background-color: #000000;color:#ffffff;width: 150px; height: 50px;padding: 15px;padding-right: 15px;">Background</label>
-                <div style="margin-top: 10px;" class="col-sm-12"id="summary" style="border-bottom: 1px solid #c0c0c0; ">
-                    <div ng-repeat="i in myimage"style="display: inline;">
-                        <img src="{{i.summary}}"style="display: inline; width: 30px;height: 30px;margin-left: 20px;"/>
+            <div class="col-sm-12" id="sum1" ></div>
+            <div class="col-sm-12" id="sum2">
+                <label id="background" >Background</label>
+                <div  class="col-sm-12"id="summary" >
+                    <div ng-repeat="i in myimage" id="imgsum1">
+                        <img src="{{i.summary}}" id="imgsum"  />
                     </div>
-                    <p style="display: inline; font-size: 20px;">Summary</p>
-                    <div ng-repeat="y in mySummary" style="margin-left: 30px; margin-top: 10px;">
+                    <p id="sumpa" >Summary</p>
+                    <div ng-repeat="j in mySummary" id="sumnd" >
                         <ul>
-                            <li> {{y.summary1}}</li>
-                            <li> {{y.summary2}}</li>
-                            <li> {{y.summary3}}</li>
-                            <li> {{y.summary4}}</li>
-                            <li> {{y.summary5}}</li>
-                            <li> {{y.summary6}}</li>
+                            <li href="#" editable-text="j.summaryvalue"> {{j.summaryvalue ||"empty"}}</li>
+
                         </ul>
                     </div>
                     <br/><br/>
 
                 </div>
                 <hr>
-                <div class="col-sm-12" id="experience" style="border-bottom: 1px solid #c0c0c0; ">
+                <div class="col-sm-12"  id="boderexp" >
                     <br/><br/>
-                    <div ng-repeat="i in myimage"style="display: inline;">
-                        <img src="{{i.experience}}"style="display: inline; width: 30px;height: 30px;margin-left: 20px;"/>
+                    <div ng-repeat="i in myimage" id="imgsum1">
+                        <img src="{{i.experience}}" id="imgexp"/>
                     </div>
-                    <p style="display: inline; font-size: 20px;">Experience</p>
-                    <div ng-repeat="ex in myExperience">
-                        <span style="margin-left: 30px;margin-top: 20px;">{{ex.experience1}}</span>
+                    <p id="expar">Experience</p>
+                    <div ng-repeat="j in myExperience">
+                        <span id="expnd" href="#" editable-text="j.experience">{{j.experience ||"empty"}}</span>
                     </div>
                     <br/><br/>
 
@@ -73,59 +70,54 @@
 
 
                 <hr>
-                <div class="col-sm-12" id="project"style="border-bottom: 1px solid #c0c0c0; ">
+                <div class="col-sm-12" id="project">
                     <br/><br/>
-                    <div ng-repeat="i in myimage"style="display: inline;"   >
-                        <img src="{{i.project}}"style="display: inline; width: 30px;height: 30px;margin-left: 20px;"/>
+                    <div ng-repeat="i in myimage"id="imgsum1" >
+                        <img src="{{i.project}}"id="imgpro"/>
                     </div>
-                    <p style="display: inline; font-size: 20px;">Project</p>
+                    <p id="propar" >Project</p>
 
-                    <ul ng-repeat="p in myproject" style="margin-top: 10px;">
-                        <li>{{p.project1}}</li>
-                        <li>{{p.project2}}</li>
-                        <li>{{p.project3}}</li>
-                        <li>{{p.project4}}</li>
+                    <ul ng-repeat="j in myproject" id="prond">
+                        <li href="#" editable-text="j.project">{{j.project|| "empty"}}</li>
+
                     </ul>
 
                     <br/><br/>
                 </div>
                 <hr>
-                <div class="col-sm-12" id="language"style="border-bottom: 1px solid #c0c0c0; ">
+                <div class="col-sm-12" id="language">
                     <br/><br/>
-                    <div ng-repeat="i in myimage"style="display: inline;">
-                        <img src="{{i.language}}"style="display: inline; width: 30px;height: 30px;margin-left: 20px;"/>
+                    <div ng-repeat="i in myimage" id="imgsum1" >
+                        <img src="{{i.language}}"id="imglan"/>
                     </div>
-                    <p style="display: inline; font-size: 20px;">Language</p>
-                    <div ng-repeat="a in myLanguage" style="margin-left:20px;margin-top: 20px;">
-                        <span style="display: inline;margin-top: 20px;">{{a.language1}}</span>
-                        <span style="display:inline; margin-left: 40%;">{{a.language2}}</span>
+                    <p id="lanpar">Language</p>
+                    <div ng-repeat="j in myLanguage" id="lannd">
+                        <li href="#" editable-text="j.language">{{j.language ||"empty"}}</li>
                     </div>
                     <br/><br/>
                 </div>
                 <hr>
-                <div class="col-sm-12" id="skill"style="border-bottom: 1px solid #c0c0c0; ">
+                <div class="col-sm-12" id="skill">
                     <br/><br/>
-                    <div ng-repeat="i in myimage" style="display: inline;">
-                        <img src="{{i.skill}}"style="display: inline; width: 30px;height: 30px;margin-left: 20px;"/>
+                    <div ng-repeat="i in myimage" id="imgsum1" >
+                        <img src="{{i.skill}}" id="imgskill"/>
                     </div>
-                    <p style="display: inline; font-size: 20px;">Skill</p>
-                    <p style="margin-top: 20px;margin-left: 30px;">Top skill</p>
-                    <ul ng-repeat="s in myskill" style="margin-top: 10px;">
-                        <li>{{s.skill1}}</li>
-                        <li>{{s.skill2}}</li>
+                    <p id="skillpar1">Skill</p>
+                    <p id="skillpar2">Top skill</p>
+                    <ul ng-repeat="j in myskill" id="skillnd">
+                        <li href="#" editable-text="j.skill">{{j.skill||"empty"}}</li>
                     </ul>
-
 
                     <br/><br/>
                 </div>
-                <div class="col-sm-12" id="education"style="border-bottom: 1px solid #c0c0c0; ">
+                <div class="col-sm-12" id="education">
                     <br/><br/>
-                    <div ng-repeat="i in myimage"style="display: inline;">
-                        <img src="{{i.education}}"style="display: inline; width: 30px;height: 30px;margin-left: 20px;"/>
+                    <div ng-repeat="i in myimage"id="imgsum1">
+                        <img src="{{i.education}}" id="imgedu"/>
                     </div>
-                    <p style="display: inline; font-size: 20px;">Education</p>
-                    <ul ng-repeat="e in myeducation" style="margin-top: 10px;">
-                        <li>{{e.education1}}</li>
+                    <p id="edupar">Education</p>
+                    <ul ng-repeat="j in myeducation" id="edund">
+                        <li href="#" editable-text="j.education">{{j.education||"empty"}}</li>
 
                     </ul>
 
@@ -134,8 +126,6 @@
                 <hr>
 
             </div>
-
-
 
         </div>
 
