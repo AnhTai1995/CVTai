@@ -1,10 +1,19 @@
 body
 {
     background-color: #A9A9A9;
+    color:black;
 }
 #header
 {
-    width: 960px; margin: 50px auto; background-color: #00FF7F;
+    width: 960px; margin: 50px auto; background-color: lightblue;
+    margin-top: 15px;
+}
+.bt
+{
+    width: 35px;
+
+    margin-left: 300px;
+    font-size: 20px;
 }
 
 #imgava
@@ -47,7 +56,7 @@ body
     margin-top: 10px; border-bottom: 1px solid #c0c0c0;
 }
 
-#imgsum1
+.imgsum1
 {
     display: inline;
 }
@@ -55,7 +64,7 @@ body
 {
     display: inline; width: 30px;height: 30px;margin-left: 20px;
 }
-#sumpa
+.para
 {
     display: inline; font-size: 20px;
 }
@@ -72,10 +81,7 @@ body
 {
     display: inline; width: 30px;height: 30px;margin-left: 20px;
 }
-#expar
-{
-    display: inline; font-size: 20px;
-}
+
 
 #expnd
 {
@@ -90,10 +96,7 @@ body
      display: inline; width: 30px;height: 30px;margin-left: 20px;
  }
 
- #propar
- {
-     display: inline; font-size: 20px;
- }
+
 
  #prond
  {
@@ -108,10 +111,7 @@ body
 {
     display: inline; width: 30px;height: 30px;margin-left: 20px;
 }
-#lanpar
-{
-    display: inline; font-size: 20px;
-}
+
 #lannd
 {
     margin-left:20px;margin-top: 20px;
@@ -124,10 +124,7 @@ body
 {
     display: inline; width: 30px;height: 30px;margin-left: 20px;
 }
-#skillpar1
-{
-    display: inline; font-size: 20px;
-}
+
 
 #skillpar2
 {
@@ -144,11 +141,6 @@ body
 #imgedu
 {
     display: inline; width: 30px;height: 30px;margin-left: 20px;
-}
-
-#edupar
-{
-    display: inline; font-size: 20px;
 }
 
 #edund

@@ -9,8 +9,8 @@
     <link rel="stylesheet" type="text/css" href="StyleCSS.css" />
     <script language="javascript" src="xeditable.js"></script>
 </head>
-<body >
-    <div ng-app="mycv" class="container" id= "header">
+<body>
+    <div ng-app="app" class="container" id= "header">
         <div   ng-controller="Ctrller" >
             <div class="col-sm-12" id="profile">
                 <div class="col-sm-4" ng-repeat="i in myimage">
@@ -40,11 +40,12 @@
             <div class="col-sm-12" id="sum1" ></div>
             <div class="col-sm-12" id="sum2">
                 <label id="background" >Background</label>
-                <div  class="col-sm-12"id="summary" >
-                    <div ng-repeat="i in myimage" id="imgsum1">
+                <div  class="col-sm-12" id="summary" ng-controller="CtrlSummary">
+                    <div ng-repeat="i in myimage" class="imgsum1">
                         <img src="{{i.summary}}" id="imgsum"  />
                     </div>
-                    <p id="sumpa" >Summary</p>
+                    <p class="para" >Summary</p>
+                    <button  class="bt" ng-click="addItem()">+</button>
                     <div ng-repeat="j in mySummary" id="sumnd" >
                         <ul>
                             <li href="#" editable-text="j.summaryvalue"> {{j.summaryvalue ||"empty"}}</li>
@@ -55,12 +56,14 @@
 
                 </div>
                 <hr>
-                <div class="col-sm-12"  id="boderexp" >
+                <div class="col-sm-12"  id="boderexp" ng-controller="CtrlExperience">
                     <br/><br/>
-                    <div ng-repeat="i in myimage" id="imgsum1">
+                    <div ng-repeat="i in myimage" class="imgsum1">
                         <img src="{{i.experience}}" id="imgexp"/>
                     </div>
-                    <p id="expar">Experience</p>
+                    <p class="para">Experience</p>
+                    <button class="bt" ng-click="addItem()">+</button>
+                    <br/><br/>
                     <div ng-repeat="j in myExperience">
                         <span id="expnd" href="#" editable-text="j.experience">{{j.experience ||"empty"}}</span>
                     </div>
@@ -70,12 +73,13 @@
 
 
                 <hr>
-                <div class="col-sm-12" id="project">
+                <div class="col-sm-12" id="project" ng-controller="CtrlProject">
                     <br/><br/>
-                    <div ng-repeat="i in myimage"id="imgsum1" >
+                    <div ng-repeat="i in myimage" class="imgsum1" >
                         <img src="{{i.project}}"id="imgpro"/>
                     </div>
-                    <p id="propar" >Project</p>
+                    <p class="para" >Project</p>
+                    <button class="bt" ng-click="addItem()">+</button>
 
                     <ul ng-repeat="j in myproject" id="prond">
                         <li href="#" editable-text="j.project">{{j.project|| "empty"}}</li>
@@ -85,24 +89,26 @@
                     <br/><br/>
                 </div>
                 <hr>
-                <div class="col-sm-12" id="language">
+                <div class="col-sm-12" id="language" ng-controller="CtrlLanguage">
                     <br/><br/>
-                    <div ng-repeat="i in myimage" id="imgsum1" >
+                    <div ng-repeat="i in myimage" class="imgsum1" >
                         <img src="{{i.language}}"id="imglan"/>
                     </div>
-                    <p id="lanpar">Language</p>
+                    <p class="para">Language</p>
+                    <button class="bt" ng-click="addItem()">+</button>
                     <div ng-repeat="j in myLanguage" id="lannd">
                         <li href="#" editable-text="j.language">{{j.language ||"empty"}}</li>
                     </div>
                     <br/><br/>
                 </div>
                 <hr>
-                <div class="col-sm-12" id="skill">
+                <div class="col-sm-12" id="skill" ng-controller="CtrlSkill">
                     <br/><br/>
-                    <div ng-repeat="i in myimage" id="imgsum1" >
+                    <div ng-repeat="i in myimage" class="imgsum1" >
                         <img src="{{i.skill}}" id="imgskill"/>
                     </div>
-                    <p id="skillpar1">Skill</p>
+                    <p class="para">Skill</p>
+                    <button class="bt" ng-click="addItem()">+</button>
                     <p id="skillpar2">Top skill</p>
                     <ul ng-repeat="j in myskill" id="skillnd">
                         <li href="#" editable-text="j.skill">{{j.skill||"empty"}}</li>
@@ -110,12 +116,13 @@
 
                     <br/><br/>
                 </div>
-                <div class="col-sm-12" id="education">
+                <div class="col-sm-12" id="education" ng-controller="CtrlEducation">
                     <br/><br/>
-                    <div ng-repeat="i in myimage"id="imgsum1">
+                    <div ng-repeat="i in myimage"class="imgsum1">
                         <img src="{{i.education}}" id="imgedu"/>
                     </div>
-                    <p id="edupar">Education</p>
+                    <p class="para">Education</p>
+                    <button class="bt" ng-click="addItem()">+</button>
                     <ul ng-repeat="j in myeducation" id="edund">
                         <li href="#" editable-text="j.education">{{j.education||"empty"}}</li>
 
